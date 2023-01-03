@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    font-family: "Poppins", "arial";
+}
+
+.bg-resep {
+    background: linear-gradient(
+        359.23deg,
+        rgba(0, 0, 0, 0.7) 0.74%,
+        rgba(0, 0, 0, 0.212344) 42.39%,
+        rgba(0, 0, 0, 0) 99.45%
+    );
+}
+
+.scroll-bar::-webkit-scrollbar {
+    width: 10px;
+}
+
+.scroll-bar::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+.scroll-bar::-webkit-scrollbar-thumb {
+    background: grey;
+    border-radius: 20px;
+}
