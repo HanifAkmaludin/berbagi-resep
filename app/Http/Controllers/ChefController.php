@@ -7,6 +7,7 @@ use App\Models\Chef;
 use App\Models\Users;
 use App\Models\Resep;
 use App\Models\Simpan_resep;
+use Illuminate\Support\Facades\Route;
 
 class ChefController extends Controller
 {

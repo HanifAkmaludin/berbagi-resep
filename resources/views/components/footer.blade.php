@@ -1,15 +1,15 @@
-<section class="mb-[50px]">
-    <div class="container flex justify-evenly">
-        <div class="w-[23%]">
-            <h1 class="font-semibold text-2xl leading-[22px] mb-[32px]">Berbagi.<span class="text-primary">Resep</span></h1>
-            <p class="font-medium text-base leading-[30px] text-secondary mb-[44px]">Our job is to filling your tummy with delicious food and  with fast and free delivery.</p>
+<section>
+    <div class="container px-[25px] flex flex-col gap-10 mb-10 md:gap-0 md:px-0 md:flex-row md:justify-evenly">
+        <div class="w-full md:w-[20%]">
+            <h1 class="font-semibold text-2xl leading-[22px] mb-[27px] md:mb-[32px]">Berbagi.<span class="text-primary">Resep</span></h1>
+            <p class="font-medium text-base leading-[30px] text-secondary mb-[27px] md:mb-[44px]">Our job is to filling your tummy with delicious food and  with fast and free delivery.</p>
             <div class="flex gap-[40px] text-primary">
-                <i class="fa-brands fa-instagram text-2xl"></i>
-                <i class="fa-brands fa-facebook-f text-2xl"></i>
-                <i class="fa-brands fa-twitter text-2xl"></i>
+                <a href=""><i class="fa-brands fa-instagram text-2xl"></i></a>
+                <a href=""><i class="fa-brands fa-facebook-f text-2xl"></i></a>
+                <a href=""><i class="fa-brands fa-twitter text-2xl"></i></a>
             </div>
         </div>
-        <div class="w-[10%]">
+        <div class="w-full md:w-[10%]">
             <ul class="font-medium text-base leading-[30px] flex flex-col gap-[12px]">
                 <li class="font-semibold text-xl leading-[22px] mb-[13px]">About</li>
                 <li>About Us</li>
@@ -18,7 +18,7 @@
                 <li>Menu</li>
             </ul>
         </div>
-        <div class="w-[15%]">
+        <div class="w-full md:w-[17%]">
             <ul class="font-medium text-base leading-[30px] flex flex-col gap-[12px]">
                 <li class="font-semibold text-xl leading-[22px] mb-[13px]">Company</li>
                 <li>Why Berbagi.Resep ?</li>
@@ -27,7 +27,7 @@
                 <li>Blog</li>
             </ul>
         </div>
-        <div class="w-[12%]">
+        <div class="w-full md:w-[12%]">
             <ul class="font-medium text-base leading-[30px] flex flex-col gap-[12px]">
                 <li class="font-semibold text-xl leading-[22px] mb-[13px]">Support</li>
                 <li>Account</li>
@@ -37,7 +37,7 @@
                 <li>Accessibility</li>
             </ul>
         </div>
-        <div class="flex flex-col gap-[12px] w-[20%]">
+        <div class="flex flex-col gap-[12px] w-full md:w-[20%]">
             <h1 class="font-semibold text-xl leading-[22px] mb-[13px]">Get in Touch</h1>
             <p class="font-medium text-base leading-[30px]">Question or feedback ?</p>
             <p class="font-medium text-base leading-[30px]">We'd love to hear from you</p>
@@ -48,5 +48,10 @@
                 </svg>
             </div>
         </div>
+    </div>
+    <div class="copyright text-center py-5">
+        <p class="font-normal text-xs leading-[15px] text-secondary">
+            2022 All Right Reserved by Hanif Akmaludin.
+        </p>
     </div>
 </section>

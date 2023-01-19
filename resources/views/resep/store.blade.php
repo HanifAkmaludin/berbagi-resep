@@ -2,20 +2,20 @@
 
 @section('title', 'Tambah Resep')
 @section('content')
-    <section class="py-10">
-        <a href="{{ route('resep.list') }}" class="absolute top-10 left-10 rotate-180 text-primary border border-primary hover:bg-primary hover:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm p-2.5 text-center inline-flex items-center">
+    <section class="pb-10 md:pt-12">
+        <a href="{{ route('resep.list') }}" class="mt-5 mb-7 ml-5 rotate-180 text-primary border border-primary hover:bg-primary hover:text-white font-medium rounded-full text-sm p-2.5 text-center inline-flex items-center md:absolute md:top-10 md:left-10 md:mt-0 md:mb-0 md:ml-0">
             <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
         </a>
-        <div class="container">
-            <h1 class="font-semibold text-4xl leading-[22px] text-center mb-10">Tambah <span class="text-primary">Resep</span></h1>
+        <div class="container px-[25px] lg:px-0">
+            <h1 class="font-semibold text-4xl leading-[40px] text-center mb-10">Tambah <span class="text-primary">Resep</span></h1>
             <div class="flex flex-col items-center">
                 @if(session("success"))
-                    <div class="msg-parent w-[40%] mx-auto flex justify-between items-center bg-green-500 py-3 px-4 mt-2 rounded-lg mb-4 text-white">
+                    <div class="msg-parent w-full md:w-[60%] lg:w-[40%] mx-auto flex justify-between items-center bg-green-500 py-3 px-4 mt-2 rounded-lg mb-4 text-white">
                         <h1 class="font-light"> {{ session("success") }}</h1>
                         <p class="font-light msg-button cursor-pointer">X</p>
                     </div>
                 @endif
-                <form action="{{ route('resep.create') }}" method="POST" enctype="multipart/form-data" class="flex justify-between bg-white border border-gray-200 w-full p-10 rounded-3xl">
+                <form action="{{ route('resep.create') }}" method="POST" enctype="multipart/form-data" class="flex flex-col p-7 gap-5 bg-white border border-gray-200 w-full rounded-3xl md:justify-between md:flex-row md:p-10 md:gap-10 lg:gap-0">
                     @csrf
                     <div>
                         <div class="mb-5">
@@ -42,18 +42,18 @@
                             </div>
                             <div class="form-bahan flex flex-col gap-4">
                                 <div class="input-bahan flex gap-3 w-full">
-                                    <input type="text" name="takaran[]" id="takaran" placeholder="contoh: 1 st" class="block w-[30%] p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 sm:text-xs focus:ring-blue-500 focus:border-blue-500">
-                                    <input type="text" name="nama_bahan[]" id="nama_bahan" placeholder="Contoh : gula" class="border border-red-400 block w-[70%] p-2 text-gray-900 rounded-lg bg-gray-50 sm:text-xs focus:ring-blue-500 focus:border-blue-500">
+                                    <input type="text" name="takaran[]" id="takaran" placeholder="1 st" class="block w-[30%] p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 sm:text-xs focus:ring-blue-500 focus:border-blue-500">
+                                    <input type="text" name="nama_bahan[]" id="nama_bahan" placeholder="gula" class="border border-red-400 block w-[70%] p-2 text-gray-900 rounded-lg bg-gray-50 sm:text-xs focus:ring-blue-500 focus:border-blue-500">
                                     <span class="close-button cursor-pointer text-white flex justify-center items-center bg-primary py-1 px-3 rounded-lg hover:bg-primary/80">X</span>
                                 </div>
                                 <div class="input-bahan flex gap-3 w-full">
-                                    <input type="text" name="takaran[]" id="takaran" placeholder="contoh: 3 butir" class="block w-[30%] p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 sm:text-xs focus:ring-blue-500 focus:border-blue-500">
-                                    <input type="text" name="nama_bahan[]" id="nama_bahan" placeholder="Contoh : telor" class="border border-red-400 block w-[70%] p-2 text-gray-900 rounded-lg bg-gray-50 sm:text-xs focus:ring-blue-500 focus:border-blue-500">
+                                    <input type="text" name="takaran[]" id="takaran" placeholder="3 butir" class="block w-[30%] p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 sm:text-xs focus:ring-blue-500 focus:border-blue-500">
+                                    <input type="text" name="nama_bahan[]" id="nama_bahan" placeholder="telor" class="border border-red-400 block w-[70%] p-2 text-gray-900 rounded-lg bg-gray-50 sm:text-xs focus:ring-blue-500 focus:border-blue-500">
                                     <span class="close-button cursor-pointer text-white flex justify-center items-center bg-primary py-1 px-3 rounded-lg hover:bg-primary/80">X</span>
                                 </div>
                                 <div class="input-bahan flex gap-3 w-full">
-                                    <input type="text" name="takaran[]" id="takaran" placeholder="contoh: 1/2 kg" class="block w-[30%] p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 sm:text-xs focus:ring-blue-500 focus:border-blue-500">
-                                    <input type="text" name="nama_bahan[]" id="nama_bahan" placeholder="Contoh : ayam" class="border border-red-400 block w-[70%] p-2 text-gray-900 rounded-lg bg-gray-50 sm:text-xs focus:ring-blue-500 focus:border-blue-500">
+                                    <input type="text" name="takaran[]" id="takaran" placeholder="1/2 kg" class="block w-[30%] p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 sm:text-xs focus:ring-blue-500 focus:border-blue-500">
+                                    <input type="text" name="nama_bahan[]" id="nama_bahan" placeholder="ayam" class="border border-red-400 block w-[70%] p-2 text-gray-900 rounded-lg bg-gray-50 sm:text-xs focus:ring-blue-500 focus:border-blue-500">
                                     <span class="close-button cursor-pointer text-white flex justify-center items-center bg-primary py-1 px-3 rounded-lg hover:bg-primary/80">X</span>
                                 </div>
                             </div>
@@ -86,7 +86,7 @@
                             <label for="nama_kategori" class="block mb-2 text-base font-medium text-gray-900">Kategori</label>
                             <input type="text" name="nama_kategori" id="nama_kategori" placeholder="Contoh : Cepat Saji" class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 sm:text-xs focus:ring-blue-500 focus:border-blue-500">
                         </div>
-                        <button type="submit" class="text-white bg-primary hover:bg-primary/80 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Kirim</button>
+                        <button type="submit" class="text-white bg-primary hover:bg-primary/80 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Kirim</button>
                     </div>
                 </form>
             </div>

@@ -27,3 +27,15 @@ html {
     background: grey;
     border-radius: 20px;
 }
+
+.rotate-span-1 {
+    @apply origin-left rotate-[40deg];
+}
+
+.animation-span-2 {
+    @apply scale-0;
+}
+
+.rotate-span-3 {
+    @apply origin-left -rotate-[40deg];
+}
