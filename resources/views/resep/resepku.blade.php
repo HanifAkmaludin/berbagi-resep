@@ -19,11 +19,11 @@
             </div>
         </div>
     </section>
-    <script>
+    {{-- <script>
         const msgButton = document.querySelector('.msg-button');
         const msgParent = document.querySelector('.msg-parent');
         msgButton.addEventListener('click', function(){
             msgParent.classList.add('hidden');
         });
-    </script>
+    </script> --}}
 @endsection
