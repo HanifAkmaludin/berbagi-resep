@@ -1,6 +1,6 @@
 @foreach($resep as $r)
 <div class="w-col-mobile h-[400px] rounded-[30px] overflow-hidden relative sm:w-col-2-card md:w-col-tablet lg:w-col-4">
-    <img src="{{ Storage::url($r->foto_resep) }}" alt="" class="h-[508px] w-[436px] object-cover object-center absolute">
+    <img src="{{ asset('storage/img/'.$r->foto_resep) }}" alt="" class="h-[508px] w-[436px] object-cover object-center absolute">
     <div class="w-full h-full bg-resep absolute flex items-end">
         <div class="flex flex-col gap-[10px] pb-5 relative w-full mx-[30px] sm:mx-[39px] md:mx-[30px] lg:mx-[39px]">
             <p class="font-medium text-[25px] leading-[22px] text-white lg:text-[20px]">{{ $r->nama_resep }}</p>
